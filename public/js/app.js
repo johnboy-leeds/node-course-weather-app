@@ -13,7 +13,7 @@ form.addEventListener('submit', (e) => {
   const input = document.getElementById('address');
   const address = input.value;
 
-  fetch('http://localhost:3003/weather?address=' + address)
+  fetch('/weather?address=' + address)
   .then((response) => {
     response.json().then((data) => {
       if (data.error) {
